@@ -9,4 +9,6 @@ import Foundation
 
 protocol RepositoryInterface {
   var persistence: Persistence { get }
+  
+  init(persistence: Persistence)
 }

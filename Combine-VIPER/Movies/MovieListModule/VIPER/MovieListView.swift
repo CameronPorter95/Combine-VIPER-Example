@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 import Combine
 
-class MovieListView: View {
+class MovieListView: View<MovieListPresenter> {
   @IBOutlet var tableView: UITableView!
   
-  override init(frame: CGRect, presenter: MovieListPresenter) {
+  required init(frame: CGRect, presenter: MovieListPresenter) {
     super.init(frame: frame, presenter: presenter)
     
     let cell = UINib(nibName: String(describing: MovieListCellView.self), bundle: nil)
@@ -24,7 +24,7 @@ class MovieListView: View {
     fatalError("init(coder:) has not been implemented")
   }
   
-  override internal func refresh() {
+  override func refresh(output: Void) {
     tableView.reloadData()
   }
 }

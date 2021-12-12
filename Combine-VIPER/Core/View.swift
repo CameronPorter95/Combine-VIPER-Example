@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 import Combine
 
-class View: UIView, ViewInterface, NibType {
+class View<P>: UIView, ViewInterface, NibType where P: PresenterInterface {
   @IBOutlet var view: UIView!
   
-  internal let presenter: MovieListPresenter
+  internal let presenter: P
   internal var cancellables = Set<AnyCancellable>()
   
-  init(frame: CGRect, presenter: MovieListPresenter) {
+  required init(frame: CGRect, presenter: P) {
     self.presenter = presenter
     super.init(frame: frame)
     nibInit()
@@ -29,7 +29,7 @@ class View: UIView, ViewInterface, NibType {
     fatalError("init(coder:) has not been implemented")
   }
   
-  internal func refresh() {
+  internal func refresh(output: P.ObjectWillChangePublisher.Output) {
     fatalError("refresh has not been implemented")
   }
 }

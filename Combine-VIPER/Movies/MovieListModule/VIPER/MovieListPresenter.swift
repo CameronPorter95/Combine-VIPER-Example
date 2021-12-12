@@ -16,7 +16,7 @@ class MovieListPresenter: PresenterInterface, ObservableObject {
   
   @Published var movies = [MovieListCellModel]()
   
-  init(interactor: MovieListInteractor) {
+  required init(interactor: MovieListInteractor) {
     self.interactor = interactor
     
     interactor.$movies

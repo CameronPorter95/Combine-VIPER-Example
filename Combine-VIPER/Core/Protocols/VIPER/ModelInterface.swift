@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ModelInterface {
-  
+protocol ModelInterface: VIPERInterface {
+  init()
 }

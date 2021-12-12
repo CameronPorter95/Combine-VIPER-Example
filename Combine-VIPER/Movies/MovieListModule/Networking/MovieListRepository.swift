@@ -10,7 +10,7 @@ import Foundation
 class MovieListRepository: RepositoryInterface {
   let persistence: Persistence
   
-  init(persistence: Persistence) {
+  required init(persistence: Persistence) {
     self.persistence = persistence
   }
 }

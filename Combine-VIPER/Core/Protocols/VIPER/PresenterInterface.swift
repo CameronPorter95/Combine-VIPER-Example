@@ -7,8 +7,10 @@
 
 import Foundation
 
-protocol PresenterInterface {
+protocol PresenterInterface: VIPERInterface, ObservableObject {
   associatedtype Interactor: InteractorInterface
   
   var interactor: Interactor { get }
+  
+  init(interactor: Interactor)
 }

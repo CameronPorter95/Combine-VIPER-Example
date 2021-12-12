@@ -13,4 +13,8 @@ class MovieListCellModel: ModelInterface {
   init(title: String) {
     self.title = title
   }
+  
+  required init() {
+    title = ""
+  }
 }

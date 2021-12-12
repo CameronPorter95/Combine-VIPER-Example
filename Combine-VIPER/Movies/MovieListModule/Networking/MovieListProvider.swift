@@ -12,7 +12,7 @@ class MovieListProvider: ProviderInterface {
   
   @Published var movies = [MovieListCellModel]()
   
-  init(repository: MovieListRepository) {
+  required init(repository: MovieListRepository) {
     self.repository = repository
   }
   

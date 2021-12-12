@@ -11,4 +11,6 @@ import Combine
 class MovieListModel: ModelInterface {
   private var cancellables = Set<AnyCancellable>()
   @Published var movies = [MovieListCellModel]()
+  
+  required init() { }
 }

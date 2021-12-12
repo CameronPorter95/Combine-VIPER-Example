@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
-protocol ViewInterface: AnyObject {
+protocol ViewInterface: AnyObject, VIPERInterface {
   associatedtype Presenter: PresenterInterface
   
   var presenter: Presenter { get }
+  
+  init(frame: CGRect, presenter: Presenter)
 }

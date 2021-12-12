@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol InteractorInterface: AnyObject {
+protocol InteractorInterface {
   associatedtype Model: ModelInterface
   
   var model: Model { get }

@@ -37,6 +37,7 @@
 		32CF11C427631340000BBB02 /* ProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF11C327631340000BBB02 /* ProviderInterface.swift */; };
 		32CF11C62763137C000BBB02 /* RepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF11C52763137C000BBB02 /* RepositoryInterface.swift */; };
 		32CF11C8276313C8000BBB02 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF11C7276313C8000BBB02 /* Persistence.swift */; };
+		7E73977C27657B4C00E426EF /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73977B27657B4C00E426EF /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		32CF11C327631340000BBB02 /* ProviderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInterface.swift; sourceTree = "<group>"; };
 		32CF11C52763137C000BBB02 /* RepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInterface.swift; sourceTree = "<group>"; };
 		32CF11C7276313C8000BBB02 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		7E73977B27657B4C00E426EF /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +111,9 @@
 				32CF116D2762A3AB000BBB02 /* SceneDelegate.swift */,
 				32CF11B42763059C000BBB02 /* Core */,
 				32CF11B5276305AF000BBB02 /* Movies */,
-				32CF11712762A3AB000BBB02 /* Main.storyboard */,
-				32CF11742762A3AF000BBB02 /* Assets.xcassets */,
-				32CF11762762A3AF000BBB02 /* LaunchScreen.storyboard */,
-				32CF11792762A3AF000BBB02 /* Info.plist */,
+				7E7397782763E7BE00E426EF /* Storyboards */,
+				7E73977A2763E7F300E426EF /* PropertyLists */,
+				7E7397792763E7D900E426EF /* Resources */,
 			);
 			path = "Combine-VIPER";
 			sourceTree = "<group>";
@@ -228,6 +229,7 @@
 		32CF11B42763059C000BBB02 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7E73977B27657B4C00E426EF /* View.swift */,
 				32CF11812762C546000BBB02 /* Protocols */,
 				32CF118E2762C965000BBB02 /* Networking */,
 			);
@@ -241,6 +243,31 @@
 				32CF11802762C28C000BBB02 /* MovieDetailModule */,
 			);
 			path = Movies;
+			sourceTree = "<group>";
+		};
+		7E7397782763E7BE00E426EF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				32CF11712762A3AB000BBB02 /* Main.storyboard */,
+				32CF11762762A3AF000BBB02 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7E7397792763E7D900E426EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32CF11742762A3AF000BBB02 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7E73977A2763E7F300E426EF /* PropertyLists */ = {
+			isa = PBXGroup;
+			children = (
+				32CF11792762A3AF000BBB02 /* Info.plist */,
+			);
+			path = PropertyLists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +366,7 @@
 				32CF119E2762CE98000BBB02 /* MovieListProvider.swift in Sources */,
 				32CF11942762CE23000BBB02 /* MovieListView.swift in Sources */,
 				32CF11982762CE39000BBB02 /* MovieListInteractor.swift in Sources */,
+				7E73977C27657B4C00E426EF /* View.swift in Sources */,
 				32CF11872762C676000BBB02 /* ViewInterface.swift in Sources */,
 				32CF116E2762A3AB000BBB02 /* SceneDelegate.swift in Sources */,
 			);
@@ -491,7 +519,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TV9C62767F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Combine-VIPER/Info.plist";
+				INFOPLIST_FILE = "Combine-VIPER/PropertyLists/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -519,7 +547,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TV9C62767F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Combine-VIPER/Info.plist";
+				INFOPLIST_FILE = "Combine-VIPER/PropertyLists/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -19,5 +19,7 @@ class MovieListController: UIViewController {
     let presenter = MovieListPresenter(interactor: interactor)
     let view = MovieListView(frame: view.frame, presenter: presenter)
     self.view = view
+    
+    interactor.getMovies()
   }
 }

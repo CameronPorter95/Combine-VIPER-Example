@@ -10,7 +10,13 @@ import Foundation
 class MovieListProvider: ProviderInterface {
   let repository: MovieListRepository
   
+  @Published var movies = [MovieListCellModel]()
+  
   init(repository: MovieListRepository) {
     self.repository = repository
+  }
+  
+  func getMovies() {
+    movies = [MovieListCellModel(title: "Henry"), MovieListCellModel(title: "Kane")]
   }
 }

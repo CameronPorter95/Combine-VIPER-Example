@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PresenterInterface: AnyObject {
+protocol PresenterInterface {
   associatedtype Interactor: InteractorInterface
   
   var interactor: Interactor { get }

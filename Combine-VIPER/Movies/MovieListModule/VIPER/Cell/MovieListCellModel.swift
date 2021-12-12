@@ -7,6 +7,10 @@
 
 import Foundation
 
-struct MovieListCellModel {
-  let title: String
+class MovieListCellModel: ModelInterface {
+  @Published var title: String
+  
+  init(title: String) {
+    self.title = title
+  }
 }

@@ -10,13 +10,18 @@ import Foundation
 class MovieListProvider: ProviderInterface {
   let repository: MovieListRepository
   
+  @Published var errors = [Error]()
   @Published var movies = [MovieListCellModel]()
   
   required init(repository: MovieListRepository) {
     self.repository = repository
   }
   
-  func getMovies() {
-    movies = [MovieListCellModel(title: "Henry"), MovieListCellModel(title: "Kane")]
+  func getMovies() async {
+    do {
+      movies = try await repository.getMovies()
+    } catch {
+      errors.append(error)
+    }
   }
 }

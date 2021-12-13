@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32695A952766B50F0010C949 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 32695A942766B50F0010C949 /* CombineMoya */; };
+		32695A972766B5870010C949 /* VIPERInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32695A962766B5870010C949 /* VIPERInterface.swift */; };
+		32695A992766B5A40010C949 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32695A982766B5A40010C949 /* ModuleFactory.swift */; };
+		32695A9C2766FFAD0010C949 /* RequestDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32695A9B2766FFAD0010C949 /* RequestDecodable.swift */; };
+		32695AA0276705590010C949 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32695A9F276705590010C949 /* Repository.swift */; };
+		32695AA227670A2A0010C949 /* MovieListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32695AA127670A2A0010C949 /* MovieListService.swift */; };
+		32695AA427670B4C0010C949 /* VIPER_Diagram.svg in Resources */ = {isa = PBXBuildFile; fileRef = 32695AA327670B4C0010C949 /* VIPER_Diagram.svg */; };
+		32695AA6276715690010C949 /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32695AA5276715690010C949 /* ServiceResponse.swift */; };
+		32695AAB276717190010C949 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32695AAA276717190010C949 /* Constants.swift */; };
 		32CF116C2762A3AB000BBB02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF116B2762A3AB000BBB02 /* AppDelegate.swift */; };
 		32CF116E2762A3AB000BBB02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF116D2762A3AB000BBB02 /* SceneDelegate.swift */; };
 		32CF11702762A3AB000BBB02 /* MovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF116F2762A3AB000BBB02 /* MovieListController.swift */; };
@@ -25,7 +34,6 @@
 		32CF119E2762CE98000BBB02 /* MovieListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF119D2762CE98000BBB02 /* MovieListProvider.swift */; };
 		32CF11A02762CEA5000BBB02 /* MovieListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF119F2762CEA5000BBB02 /* MovieListRepository.swift */; };
 		32CF11A22762CEF4000BBB02 /* MovieListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF11A12762CEF4000BBB02 /* MovieListRequest.swift */; };
-		32CF11A82762FD9C000BBB02 /* VIPER_Diagram.svg in Resources */ = {isa = PBXBuildFile; fileRef = 32CF11A72762FD9C000BBB02 /* VIPER_Diagram.svg */; };
 		32CF11AA276301E6000BBB02 /* MovieListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32CF11A9276301E6000BBB02 /* MovieListView.xib */; };
 		32CF11AE27630428000BBB02 /* MovieListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF11AD27630428000BBB02 /* MovieListCellView.swift */; };
 		32CF11B027630439000BBB02 /* MovieListCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32CF11AF27630438000BBB02 /* MovieListCellView.xib */; };
@@ -41,6 +49,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32695A962766B5870010C949 /* VIPERInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERInterface.swift; sourceTree = "<group>"; };
+		32695A982766B5A40010C949 /* ModuleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		32695A9A2766B5D50010C949 /* Combine-VIPER.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Combine-VIPER.entitlements"; sourceTree = "<group>"; };
+		32695A9B2766FFAD0010C949 /* RequestDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDecodable.swift; sourceTree = "<group>"; };
+		32695A9F276705590010C949 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		32695AA127670A2A0010C949 /* MovieListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListService.swift; sourceTree = "<group>"; };
+		32695AA327670B4C0010C949 /* VIPER_Diagram.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VIPER_Diagram.svg; sourceTree = "<group>"; };
+		32695AA5276715690010C949 /* ServiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceResponse.swift; path = "Combine-VIPER/Core/ServiceResponse.swift"; sourceTree = SOURCE_ROOT; };
+		32695AA8276716590010C949 /* authConfig.example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = authConfig.example.xcconfig; sourceTree = "<group>"; };
+		32695AA92767166E0010C949 /* authConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = authConfig.xcconfig; sourceTree = "<group>"; };
+		32695AAA276717190010C949 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		32CF11682762A3AB000BBB02 /* Combine-VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combine-VIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CF116B2762A3AB000BBB02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32CF116D2762A3AB000BBB02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +80,6 @@
 		32CF119D2762CE98000BBB02 /* MovieListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListProvider.swift; sourceTree = "<group>"; };
 		32CF119F2762CEA5000BBB02 /* MovieListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRepository.swift; sourceTree = "<group>"; };
 		32CF11A12762CEF4000BBB02 /* MovieListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRequest.swift; sourceTree = "<group>"; };
-		32CF11A72762FD9C000BBB02 /* VIPER_Diagram.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VIPER_Diagram.svg; sourceTree = "<group>"; };
 		32CF11A9276301E6000BBB02 /* MovieListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListView.xib; sourceTree = "<group>"; };
 		32CF11AD27630428000BBB02 /* MovieListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCellView.swift; sourceTree = "<group>"; };
 		32CF11AF27630438000BBB02 /* MovieListCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListCellView.xib; sourceTree = "<group>"; };
@@ -81,16 +99,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32695A952766B50F0010C949 /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32695AA72767161B0010C949 /* AuthConfig */ = {
+			isa = PBXGroup;
+			children = (
+				32695AA8276716590010C949 /* authConfig.example.xcconfig */,
+				32695AA92767166E0010C949 /* authConfig.xcconfig */,
+			);
+			path = AuthConfig;
+			sourceTree = "<group>";
+		};
 		32CF115F2762A3AB000BBB02 = {
 			isa = PBXGroup;
 			children = (
 				32CF116A2762A3AB000BBB02 /* Combine-VIPER */,
+				32695AA72767161B0010C949 /* AuthConfig */,
 				32CF11A32762FD4C000BBB02 /* Documentation */,
 				32CF11692762A3AB000BBB02 /* Products */,
 			);
@@ -107,6 +136,7 @@
 		32CF116A2762A3AB000BBB02 /* Combine-VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				32695A9A2766B5D50010C949 /* Combine-VIPER.entitlements */,
 				32CF116B2762A3AB000BBB02 /* AppDelegate.swift */,
 				32CF116D2762A3AB000BBB02 /* SceneDelegate.swift */,
 				32CF11B42763059C000BBB02 /* Core */,
@@ -147,6 +177,7 @@
 		32CF118A2762C7CB000BBB02 /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				32695A962766B5870010C949 /* VIPERInterface.swift */,
 				32CF11862762C676000BBB02 /* ViewInterface.swift */,
 				32CF11822762C653000BBB02 /* PresenterInterface.swift */,
 				32CF11BF27630D02000BBB02 /* RouterInterface.swift */,
@@ -160,7 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				32CF118F2762C976000BBB02 /* Protocols */,
+				32695AA5276715690010C949 /* ServiceResponse.swift */,
 				32CF11C7276313C8000BBB02 /* Persistence.swift */,
+				32695A9F276705590010C949 /* Repository.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -171,6 +204,7 @@
 				32CF11C327631340000BBB02 /* ProviderInterface.swift */,
 				32CF11C52763137C000BBB02 /* RepositoryInterface.swift */,
 				32CF118C2762C912000BBB02 /* Requestable.swift */,
+				32695A9B2766FFAD0010C949 /* RequestDecodable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -180,6 +214,7 @@
 			children = (
 				32CF119D2762CE98000BBB02 /* MovieListProvider.swift */,
 				32CF119F2762CEA5000BBB02 /* MovieListRepository.swift */,
+				32695AA127670A2A0010C949 /* MovieListService.swift */,
 				32CF11A12762CEF4000BBB02 /* MovieListRequest.swift */,
 			);
 			path = Networking;
@@ -202,7 +237,7 @@
 		32CF11A32762FD4C000BBB02 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				32CF11A72762FD9C000BBB02 /* VIPER_Diagram.svg */,
+				32695AA327670B4C0010C949 /* VIPER_Diagram.svg */,
 			);
 			path = Documentation;
 			sourceTree = "<group>";
@@ -230,8 +265,10 @@
 			isa = PBXGroup;
 			children = (
 				7E73977B27657B4C00E426EF /* View.swift */,
+				32695A982766B5A40010C949 /* ModuleFactory.swift */,
 				32CF11812762C546000BBB02 /* Protocols */,
 				32CF118E2762C965000BBB02 /* Networking */,
+				32695AAA276717190010C949 /* Constants.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -286,6 +323,9 @@
 			dependencies = (
 			);
 			name = "Combine-VIPER";
+			packageProductDependencies = (
+				32695A942766B50F0010C949 /* CombineMoya */,
+			);
 			productName = "Combine-VIPER";
 			productReference = 32CF11682762A3AB000BBB02 /* Combine-VIPER.app */;
 			productType = "com.apple.product-type.application";
@@ -314,6 +354,9 @@
 				Base,
 			);
 			mainGroup = 32CF115F2762A3AB000BBB02;
+			packageReferences = (
+				32695A932766B50F0010C949 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 32CF11692762A3AB000BBB02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,8 +373,8 @@
 			files = (
 				32CF11782762A3AF000BBB02 /* LaunchScreen.storyboard in Resources */,
 				32CF11AA276301E6000BBB02 /* MovieListView.xib in Resources */,
-				32CF11A82762FD9C000BBB02 /* VIPER_Diagram.svg in Resources */,
 				32CF11B027630439000BBB02 /* MovieListCellView.xib in Resources */,
+				32695AA427670B4C0010C949 /* VIPER_Diagram.svg in Resources */,
 				32CF11752762A3AF000BBB02 /* Assets.xcassets in Resources */,
 				32CF11732762A3AB000BBB02 /* Main.storyboard in Resources */,
 			);
@@ -345,12 +388,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CF119C2762CE64000BBB02 /* MovieListModel.swift in Sources */,
+				32695A992766B5A40010C949 /* ModuleFactory.swift in Sources */,
 				32CF11B927630901000BBB02 /* CellProtocol.swift in Sources */,
+				32695A972766B5870010C949 /* VIPERInterface.swift in Sources */,
 				32CF11702762A3AB000BBB02 /* MovieListController.swift in Sources */,
 				32CF11962762CE2E000BBB02 /* MovieListPresenter.swift in Sources */,
 				32CF11C027630D02000BBB02 /* RouterInterface.swift in Sources */,
+				32695AAB276717190010C949 /* Constants.swift in Sources */,
 				32CF116C2762A3AB000BBB02 /* AppDelegate.swift in Sources */,
 				32CF11C427631340000BBB02 /* ProviderInterface.swift in Sources */,
+				32695AA6276715690010C949 /* ServiceResponse.swift in Sources */,
 				32CF119A2762CE4C000BBB02 /* MovieListRouter.swift in Sources */,
 				32CF11852762C65D000BBB02 /* InteractorInterface.swift in Sources */,
 				32CF11C8276313C8000BBB02 /* Persistence.swift in Sources */,
@@ -358,11 +405,14 @@
 				32CF11BB27630949000BBB02 /* MovieListCellModel.swift in Sources */,
 				32CF11A02762CEA5000BBB02 /* MovieListRepository.swift in Sources */,
 				32CF118D2762C912000BBB02 /* Requestable.swift in Sources */,
+				32695AA0276705590010C949 /* Repository.swift in Sources */,
+				32695AA227670A2A0010C949 /* MovieListService.swift in Sources */,
 				32CF11AE27630428000BBB02 /* MovieListCellView.swift in Sources */,
 				32CF11C62763137C000BBB02 /* RepositoryInterface.swift in Sources */,
 				32CF11B327630593000BBB02 /* NibType.swift in Sources */,
 				32CF11C227630E23000BBB02 /* ModelInterface.swift in Sources */,
 				32CF11832762C653000BBB02 /* PresenterInterface.swift in Sources */,
+				32695A9C2766FFAD0010C949 /* RequestDecodable.swift in Sources */,
 				32CF119E2762CE98000BBB02 /* MovieListProvider.swift in Sources */,
 				32CF11942762CE23000BBB02 /* MovieListView.swift in Sources */,
 				32CF11982762CE39000BBB02 /* MovieListInteractor.swift in Sources */,
@@ -396,6 +446,7 @@
 /* Begin XCBuildConfiguration section */
 		32CF117A2762A3AF000BBB02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32695AA92767166E0010C949 /* authConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -457,6 +508,7 @@
 		};
 		32CF117B2762A3AF000BBB02 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32695AA92767166E0010C949 /* authConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -515,6 +567,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Combine-VIPER/Combine-VIPER.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TV9C62767F;
@@ -523,6 +576,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -532,6 +586,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.viper.Combine-VIPER";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Combine-VIPER/Combine-VIPER.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TV9C62767F;
@@ -551,6 +608,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -560,6 +618,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.viper.Combine-VIPER";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,6 +648,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32695A932766B50F0010C949 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32695A942766B50F0010C949 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32695A932766B50F0010C949 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 32CF11602762A3AB000BBB02 /* Project object */;
 }

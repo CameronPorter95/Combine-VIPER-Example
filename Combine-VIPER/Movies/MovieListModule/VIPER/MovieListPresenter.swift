@@ -14,14 +14,18 @@ class MovieListPresenter: PresenterInterface, ObservableObject {
   
   private var cancellables = Set<AnyCancellable>()
   
+  @Published var errors = [Error]()
   @Published var movies = [MovieListCellModel]()
   
   required init(interactor: MovieListInteractor) {
     self.interactor = interactor
     
     interactor.$movies
-      .dropFirst()
       .assign(to: \.movies, on: self)
+      .store(in: &cancellables)
+    
+    interactor.provider.$errors
+      .assign(to: \.errors, on: self)
       .store(in: &cancellables)
   }
 }

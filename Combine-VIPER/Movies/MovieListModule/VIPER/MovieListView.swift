@@ -25,6 +25,10 @@ class MovieListView: View<MovieListPresenter> {
   }
   
   override func refresh(output: Void) {
+    presenter.errors.forEach {
+      print($0)
+    }
+    
     tableView.reloadData()
   }
 }

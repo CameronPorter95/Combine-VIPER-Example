@@ -7,10 +7,9 @@
 
 import Foundation
 
-class MovieListRepository: RepositoryInterface {
-  let persistence: Persistence
+class MovieListRepository: Repository<MovieListService>, RequestDecodable {
   
-  required init(persistence: Persistence) {
-    self.persistence = persistence
+  func getMovies() async throws -> [MovieListCellModel] {
+    return try await asyncObject(.getMovies)
   }
 }

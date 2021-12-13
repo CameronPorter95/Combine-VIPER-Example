@@ -26,12 +26,12 @@ class MovieListInteractor: ModelProviderInteractorInterface {
     provider.$movies
       .assign(to: \.model.movies, on: self)
       .store(in: &cancellables)
-    
-    getMovies()
   }
   
   func getMovies() {
-    provider.getMovies()
+    Task {
+      await provider.getMovies()
+    }
   }
   
   func moduleDidCreate() {

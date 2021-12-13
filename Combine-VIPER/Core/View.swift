@@ -21,6 +21,7 @@ class View<P>: UIView, ViewInterface, NibType where P: PresenterInterface {
     nibInit()
     
     presenter.objectWillChange
+      .receive(on: DispatchQueue.main)
       .sink(receiveValue: refresh)
       .store(in: &cancellables)
   }

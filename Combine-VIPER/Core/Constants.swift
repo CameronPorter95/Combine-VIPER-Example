@@ -8,6 +8,10 @@
 import Foundation
 
 struct Constants {
+  static var baseURL: String {
+    return Bundle.main.object(forInfoDictionaryKey: "BaseURL") as! String
+  }
+  
   static var apiKey: String {
     return Bundle.main.object(forInfoDictionaryKey: "ApiKey") as! String
   }

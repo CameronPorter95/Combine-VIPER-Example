@@ -13,8 +13,6 @@ enum MovieListService {
 }
 
 extension MovieListService: TargetType {
-  var baseURL: URL { URL(string: "https://api.themoviedb.org/3")! }
-  
   var path: String {
     switch self {
     case .getMovies:
@@ -27,20 +25,5 @@ extension MovieListService: TargetType {
     case .getMovies:
       return .get
     }
-  }
-  
-  var task: Task {
-    switch self {
-    case .getMovies:
-      return .requestParameters(parameters: ["api_key": Constants.apiKey], encoding: URLEncoding.queryString)
-    }
-  }
-  
-  var sampleData: Data {
-    return Data("".utf8)
-  }
-  
-  var headers: [String: String]? {
-    return ["Content-type": "application/json"]
   }
 }

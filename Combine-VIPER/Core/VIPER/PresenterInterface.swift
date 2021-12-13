@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import Combine
 
 protocol PresenterInterface: VIPERInterface, ObservableObject {
   associatedtype Interactor: InteractorInterface
   
   var interactor: Interactor { get }
+  
+  var errors: [Error] { get set }
   
   init(interactor: Interactor)
 }

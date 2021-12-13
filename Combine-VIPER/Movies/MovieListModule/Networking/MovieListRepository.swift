@@ -10,6 +10,6 @@ import Foundation
 class MovieListRepository: Repository<MovieListService>, RequestDecodable {
   
   func getMovies() async throws -> [MovieListCellModel] {
-    return try await asyncObject(.getMovies)
+    return try await asyncArray(.getMovies)
   }
 }

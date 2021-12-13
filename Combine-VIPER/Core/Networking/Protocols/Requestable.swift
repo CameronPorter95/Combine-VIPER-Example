@@ -13,14 +13,12 @@ import Combine
 ///Allows making requests
 protocol Requestable: AnyObject {
   associatedtype Request: TargetType
-  
-//  var cancellables: Set<AnyCancellable> { get set }
 }
 
 extension Requestable {
   func future(_ target: Request) async throws -> Response {
     return try await withCheckedThrowingContinuation({ continuation in
-      MoyaProvider<Request>(plugins: [NetworkLoggerPlugin(configuration: .init(logOptions: .formatRequestAscURL))]).request(target) { result in
+      ServiceProvider<Request>.instance().request(target) { result in
         switch result {
         case .success(let response):
           continuation.resume(returning: response)
@@ -29,16 +27,36 @@ extension Requestable {
         }
       }
     })
-//    let provider = MoyaProvider<Request>()
-//    return try await withCheckedThrowingContinuation({ continuation in
-//      provider.requestPublisher(target)
-//        .sink { completion in
-//          guard case let .failure(error) = completion else { return }
-//          continuation.resume(throwing: error)
-//        } receiveValue: { response in
-//          continuation.resume(returning: response)
-//        }
-//        .store(in: &cancellables)
-//    })
   }
+  
+//  func futureSequence(targets: [Service]) -> AsyncThrowingStream<Response, Error> {
+//    var index = 0
+//    let requester = Requester()
+//
+//    return AsyncThrowingStream {
+//      guard index < targets.count else {
+//        return nil
+//      }
+//
+//      let target = targets[index]
+//      index += 1
+//
+//      let response = try await requester.future(target)
+//      return response
+//    }
+//  }
 }
+
+//class Requester: Requestable {
+//  typealias Request = Service
+//}
+//
+//class Service: TargetType {
+//  var path: String {
+//    return ""
+//  }
+//
+//  var method: Moya.Method {
+//    return .get
+//  }
+//}

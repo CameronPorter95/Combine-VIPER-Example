@@ -12,15 +12,3 @@ protocol InteractorInterface: VIPERInterface {
   
   var model: Model { get }
 }
-
-protocol ModelInteractorInterface: InteractorInterface {
-  init(model: Model)
-}
-
-protocol ModelProviderInteractorInterface: InteractorInterface {
-  associatedtype Provider: ProviderInterface
-  
-  var provider: Provider { get }
-  
-  init(model: Model, provider: Provider)
-}

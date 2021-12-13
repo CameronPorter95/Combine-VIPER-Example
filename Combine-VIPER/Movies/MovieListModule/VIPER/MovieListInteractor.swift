@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class MovieListInteractor: ModelProviderInteractorInterface {
+class MovieListInteractor: InteractorInterface {
   internal let model: MovieListModel
   internal let provider: MovieListProvider
   private var cancellables = Set<AnyCancellable>()
@@ -26,15 +26,13 @@ class MovieListInteractor: ModelProviderInteractorInterface {
     provider.$movies
       .assign(to: \.model.movies, on: self)
       .store(in: &cancellables)
+    
+    getMovies()
   }
   
   func getMovies() {
     Task {
       await provider.getMovies()
     }
-  }
-  
-  func moduleDidCreate() {
-    getMovies()
   }
 }

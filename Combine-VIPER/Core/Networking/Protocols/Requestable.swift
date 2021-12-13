@@ -6,7 +6,6 @@
 //
 
 import Foundation
-//import CombineMoya
 import Moya
 import Combine
 
@@ -28,35 +27,4 @@ extension Requestable {
       }
     })
   }
-  
-//  func futureSequence(targets: [Service]) -> AsyncThrowingStream<Response, Error> {
-//    var index = 0
-//    let requester = Requester()
-//
-//    return AsyncThrowingStream {
-//      guard index < targets.count else {
-//        return nil
-//      }
-//
-//      let target = targets[index]
-//      index += 1
-//
-//      let response = try await requester.future(target)
-//      return response
-//    }
-//  }
 }
-
-//class Requester: Requestable {
-//  typealias Request = Service
-//}
-//
-//class Service: TargetType {
-//  var path: String {
-//    return ""
-//  }
-//
-//  var method: Moya.Method {
-//    return .get
-//  }
-//}

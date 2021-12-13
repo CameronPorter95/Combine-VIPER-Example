@@ -98,7 +98,6 @@
 		32CF11C52763137C000BBB02 /* RepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInterface.swift; sourceTree = "<group>"; };
 		32CF11C7276313C8000BBB02 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		32F5D96B2767FC61001F63E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		32F5D96D2767FDF8001F63E6 /* TMDBLogo.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = TMDBLogo.svg; sourceTree = "<group>"; };
 		7E73977B27657B4C00E426EF /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7EE3A67A27673C0F00C9C364 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		7EE3A67C27673C3300C9C364 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
@@ -134,6 +133,7 @@
 		32CF115F2762A3AB000BBB02 = {
 			isa = PBXGroup;
 			children = (
+				32F5D96B2767FC61001F63E6 /* README.md */,
 				32CF116A2762A3AB000BBB02 /* Combine-VIPER */,
 				32695AA72767161B0010C949 /* AuthConfig */,
 				32CF11A32762FD4C000BBB02 /* Documentation */,
@@ -247,7 +247,6 @@
 		32CF11A32762FD4C000BBB02 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				32F5D96C2767FDE1001F63E6 /* ReadMe */,
 				32695AA327670B4C0010C949 /* VIPER_Diagram.svg */,
 			);
 			path = Documentation;
@@ -292,15 +291,6 @@
 				32CF11802762C28C000BBB02 /* MovieDetailModule */,
 			);
 			path = Movies;
-			sourceTree = "<group>";
-		};
-		32F5D96C2767FDE1001F63E6 /* ReadMe */ = {
-			isa = PBXGroup;
-			children = (
-				32F5D96B2767FC61001F63E6 /* README.md */,
-				32F5D96D2767FDF8001F63E6 /* TMDBLogo.svg */,
-			);
-			path = ReadMe;
 			sourceTree = "<group>";
 		};
 		7E7397782763E7BE00E426EF /* Storyboards */ = {

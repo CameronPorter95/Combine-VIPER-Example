@@ -6,7 +6,7 @@ The interface is UIKit although it's written in a way that allows easy upgrades 
 
 This product uses the TMDB API but is not endorsed or certified by TMDB.
 
-![Screenshot](Documentation/ReadMe/TMDBLogo.svg)
+![Screenshot](Combine-VIPER/Resources/Assets.xcassets/TMDBLogo.imageset/TMDBLogo.svg)
 
 ## VIPER
 

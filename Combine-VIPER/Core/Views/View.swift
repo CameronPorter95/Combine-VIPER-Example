@@ -15,9 +15,9 @@ class View<P>: UIView, ViewInterface, NibType where P: PresenterInterface {
   internal let presenter: P
   internal var cancellables = Set<AnyCancellable>()
   
-  required init(frame: CGRect, presenter: P) {
+  required init(presenter: P) {
     self.presenter = presenter
-    super.init(frame: frame)
+    super.init(frame: .zero)
     nibInit()
     
     NSLayoutConstraint.activate([

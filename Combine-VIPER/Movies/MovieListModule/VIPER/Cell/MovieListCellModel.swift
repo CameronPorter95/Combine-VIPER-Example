@@ -8,22 +8,17 @@
 import Foundation
 
 class MovieListCellModel: ModelInterface, Codable {
+  var id: Int
   @Published var title: String
   
-  init(title: String) {
-    self.title = title
-  }
-  
-  required init() {
-    title = ""
-  }
-  
   enum CodingKeys: String, CodingKey {
+    case id = "id"
     case title = "title"
   }
   
   required init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
+    id = try container.decode(Int.self, forKey: .id)
     title = try container.decode(String.self, forKey: .title)
   }
   

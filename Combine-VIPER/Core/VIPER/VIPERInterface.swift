@@ -8,9 +8,5 @@
 import Foundation
 
 protocol VIPERInterface {
-  func moduleDidCreate()
-}
-
-extension VIPERInterface {
-  func moduleDidCreate() { }
+  
 }

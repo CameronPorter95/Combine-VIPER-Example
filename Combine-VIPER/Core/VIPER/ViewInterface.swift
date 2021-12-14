@@ -13,5 +13,5 @@ protocol ViewInterface: AnyObject, VIPERInterface {
   
   var presenter: Presenter { get }
   
-  init(frame: CGRect, presenter: Presenter)
+  init(presenter: Presenter)
 }

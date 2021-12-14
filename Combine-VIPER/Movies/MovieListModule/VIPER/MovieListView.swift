@@ -12,12 +12,13 @@ import Combine
 class MovieListView: View<MovieListPresenter> {
   @IBOutlet var tableView: UITableView!
   
-  required init(frame: CGRect, presenter: MovieListPresenter) {
-    super.init(frame: frame, presenter: presenter)
+  required init(presenter: MovieListPresenter) {
+    super.init(presenter: presenter)
     
     let cell = UINib(nibName: String(describing: MovieListCellView.self), bundle: nil)
     tableView.register(cell, forCellReuseIdentifier: MovieListCellView.reuseIdentifier)
     tableView.dataSource = self
+    tableView.delegate = self
   }
   
   required init?(coder: NSCoder) {
@@ -27,6 +28,14 @@ class MovieListView: View<MovieListPresenter> {
   override func refresh(output: Void) {
     super.refresh(output: output)
     tableView.reloadData()
+  }
+}
+
+extension MovieListView: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if let id = presenter.movies[safe: indexPath.row]?.id {
+      presenter.routeToDetail(for: id)
+    }
   }
 }
 

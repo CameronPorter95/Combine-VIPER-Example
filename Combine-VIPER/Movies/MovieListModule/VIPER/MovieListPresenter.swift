@@ -28,4 +28,9 @@ class MovieListPresenter: PresenterInterface, ObservableObject {
       .assign(to: \.errors, on: self)
       .store(in: &cancellables)
   }
+  
+  func routeToDetail(for id: Int) {
+    //TODO notify view controller of routing
+    MovieListRouter().makeDetailView(for: id)
+  }
 }

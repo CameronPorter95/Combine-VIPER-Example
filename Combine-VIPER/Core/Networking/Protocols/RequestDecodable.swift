@@ -15,7 +15,7 @@ protocol RequestDecodable: Requestable {
 extension RequestDecodable {
   func asyncObject<T: Codable>(_ target: Request) async throws -> T {
     let response = try await future(target)
-    guard let object = try response.map(ServiceResponse<T>.self).result else {
+    guard let object = try? response.map(T.self) else {
       throw MoyaError.jsonMapping(response)
     }
     return object

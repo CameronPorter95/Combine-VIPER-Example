@@ -29,8 +29,11 @@ class MovieListPresenter: PresenterInterface, ObservableObject {
       .store(in: &cancellables)
   }
   
-  func routeToDetail(for id: Int) {
-    //TODO notify view controller of routing
-    MovieListRouter().makeDetailView(for: id)
+  func notifyMovieSelection(with id: Int) {
+    NotificationCenter.default.post(name: .didSelectMovie, object: id)
   }
+}
+
+extension Notification.Name {
+  static let didSelectMovie = Notification.Name(rawValue: "didSelectMovie")
 }

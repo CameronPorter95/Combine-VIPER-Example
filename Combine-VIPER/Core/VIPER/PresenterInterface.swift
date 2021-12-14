@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 protocol PresenterInterface: VIPERInterface, ObservableObject {
   associatedtype Interactor: InteractorInterface

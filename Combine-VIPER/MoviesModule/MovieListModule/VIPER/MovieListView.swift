@@ -34,7 +34,7 @@ class MovieListView: View<MovieListPresenter> {
 extension MovieListView: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if let id = presenter.movies[safe: indexPath.row]?.id {
-      presenter.routeToDetail(for: id)
+      presenter.notifyMovieSelection(with: id)
     }
   }
 }

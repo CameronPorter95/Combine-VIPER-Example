@@ -21,6 +21,12 @@ class MovieDetailInteractor: InteractorInterface {
     self.model = model
     self.provider = provider
     
+    model.$id
+      .sink { [weak self] id in
+        self?.getAllInformation(for: id)
+      }
+      .store(in: &cancellables)
+    
     model.$detail
       .assign(to: \.detail, on: self)
       .store(in: &cancellables)
@@ -38,20 +44,23 @@ class MovieDetailInteractor: InteractorInterface {
       .compactMap { $0 }
       .assign(to: \.model.poster, on: self)
       .store(in: &cancellables)
-    
-    Task {
-      await getDetail()
-      await getPoster()
-    }
   }
   
-  func getDetail() async {
-    await provider.getDetail(for: model.id)
+  func getDetail(for id: Int) async {
+    await provider.getDetail(for: id)
   }
   
   func getPoster() async {
     if let path = model.detail?.poster_path {
       await provider.getPoster(for: path)
+    }
+  }
+    
+  func getAllInformation(for id: Int?) {
+    guard let id = id else { return }
+    Task {
+      await getDetail(for: id)
+      await getPoster()
     }
   }
 }

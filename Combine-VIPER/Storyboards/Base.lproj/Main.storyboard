@@ -1,83 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yhp-w8-AU3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JYQ-Lv-oZa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movie List Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Movie Split Controller-->
+        <scene sceneID="gey-4U-gJ9">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MovieListController" customModule="Combine_VIPER" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="zfl-xw-fRL">
-                        <connections>
-                            <outlet property="titleView" destination="yEI-XS-yga" id="mUs-37-2sD"/>
-                        </connections>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="yEI-XS-yga" userLabel="TitleView">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH1-1q-GRK">
-                            <rect key="frame" x="177.5" y="11.5" width="59.5" height="21"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TMDBLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VHG-3p-04n">
-                            <rect key="frame" x="258.5" y="14" width="135.5" height="16"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="VHG-3p-04n" secondAttribute="height" multiplier="139:16" id="SMa-cG-Aty"/>
-                            </constraints>
-                        </imageView>
-                    </subviews>
-                    <viewLayoutGuide key="safeArea" id="aE3-SR-jrw"/>
-                    <constraints>
-                        <constraint firstItem="VHG-3p-04n" firstAttribute="height" secondItem="yEI-XS-yga" secondAttribute="height" multiplier="0.355" id="68z-gO-28a"/>
-                        <constraint firstAttribute="trailing" secondItem="VHG-3p-04n" secondAttribute="trailing" constant="20" id="Jc6-ke-fZ2"/>
-                        <constraint firstItem="VHG-3p-04n" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zH1-1q-GRK" secondAttribute="trailing" constant="20" id="cXH-aR-6Q8"/>
-                        <constraint firstItem="zH1-1q-GRK" firstAttribute="centerX" secondItem="yEI-XS-yga" secondAttribute="centerX" id="gnx-7k-ap3"/>
-                        <constraint firstItem="zH1-1q-GRK" firstAttribute="centerY" secondItem="yEI-XS-yga" secondAttribute="centerY" id="o8e-q4-LpB"/>
-                        <constraint firstItem="VHG-3p-04n" firstAttribute="centerY" secondItem="yEI-XS-yga" secondAttribute="centerY" id="y0q-Ua-aYe"/>
-                    </constraints>
-                </view>
+                <splitViewController allowDoubleColumnStyle="YES" id="JYQ-Lv-oZa" customClass="MovieSplitController" customModule="Combine_VIPER" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5K0-fk-jJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050.7246376811595" y="138.61607142857142"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="8Db-RK-TE3">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yhp-w8-AU3" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TR2-af-OFd">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QIS-J6-ciV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m6q-vF-stT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+            <point key="canvasLocation" x="691" y="82"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="TMDBLogo" width="273.42001342773438" height="35.520000457763672"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

@@ -15,8 +15,9 @@ class MovieListRouter {
     let view = MovieDetailView(presenter:
       MovieDetailPresenter(interactor:
         MovieDetailInteractor(model: MovieDetailModel(id: id), provider:
-          MovieDetailProvider(repository:
-            MovieDetailRepository(persistence: appDelegate.persistence)
+          MovieDetailProvider(
+            repository: MovieDetailRepository(persistence: appDelegate.persistence),
+            imageRepository: MovieImageRepository(persistence: appDelegate.persistence)
           )
         )
       )

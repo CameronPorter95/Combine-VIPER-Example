@@ -9,4 +9,5 @@ import Foundation
 
 struct MovieDetail: Codable {
   let title: String
+  let poster_path: String
 }

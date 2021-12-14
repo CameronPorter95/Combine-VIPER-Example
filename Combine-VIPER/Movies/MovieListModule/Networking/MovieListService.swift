@@ -12,7 +12,7 @@ enum MovieListService {
   case getMovies
 }
 
-extension MovieListService: TargetType {
+extension MovieListService: Api3Service {
   var path: String {
     switch self {
     case .getMovies:

@@ -9,11 +9,6 @@ import Foundation
 import Moya
 
 extension TargetType {
-  
-  var baseURL: URL {
-    URL(string: "\(Constants.baseURL)")!
-  }
-  
   var task: Task {
     return .requestPlain
   }

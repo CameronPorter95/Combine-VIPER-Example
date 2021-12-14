@@ -11,6 +11,4 @@ protocol ProviderInterface {
   associatedtype Repository
 
   var repository: Repository { get }
-  
-  init(repository: Repository)
 }

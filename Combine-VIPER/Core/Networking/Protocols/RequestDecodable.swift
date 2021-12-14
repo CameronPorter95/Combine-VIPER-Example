@@ -7,6 +7,7 @@
 
 import Foundation
 import Moya
+import UIKit
 
 protocol RequestDecodable: Requestable {
   
@@ -27,5 +28,13 @@ extension RequestDecodable {
       throw MoyaError.jsonMapping(response)
     }
     return array
+  }
+  
+  func asyncImage(_ target: Request) async throws -> UIImage {
+    let response = try await future(target)
+    guard let image = try? response.mapImage() as UIImage else {
+      throw MoyaError.jsonMapping(response)
+    }
+    return image
   }
 }

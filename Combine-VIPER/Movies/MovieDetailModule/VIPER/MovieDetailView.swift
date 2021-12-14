@@ -11,6 +11,7 @@ import Combine
 
 class MovieDetailView: View<MovieDetailPresenter> {
   @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var poster: UIImageView!
   
   required init(presenter: MovieDetailPresenter) {
     super.init(presenter: presenter)
@@ -22,7 +23,7 @@ class MovieDetailView: View<MovieDetailPresenter> {
   
   override func refresh(output: Void) {
     super.refresh(output: output)
-    print(presenter.detail?.title)
     titleLabel.text = presenter.detail?.title
+    poster.image = presenter.poster
   }
 }

@@ -1,5 +1,5 @@
 //
-//  MovieDetailService.swift
+//  MovieImageService.swift
 //  Combine-VIPER
 //
 //  Created by Cam on 14/12/21.
@@ -8,21 +8,21 @@
 import Foundation
 import Moya
 
-enum MovieDetailService {
-  case getDetail(Int)
+enum MovieImageService {
+  case getPoster(String)
 }
 
-extension MovieDetailService: Api3Service {
+extension MovieImageService: ImageService {
   var path: String {
     switch self {
-    case .getDetail(let id):
-      return "/movie/\(id)"
+    case .getPoster(let path):
+      return "/t/p/w500/\(path)"
     }
   }
   
   var method: Moya.Method {
     switch self {
-    case .getDetail:
+    case .getPoster:
       return .get
     }
   }

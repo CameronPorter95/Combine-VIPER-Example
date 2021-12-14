@@ -7,14 +7,12 @@
 
 import Foundation
 import Combine
+import UIKit
 
 class MovieDetailModel: ModelInterface {
   let id: Int
-  @Published var detail: MovieDetail? {
-    didSet {
-      print(detail)
-    }
-  }
+  @Published var detail: MovieDetail?
+  @Published var poster: UIImage?
   
   init(id: Int) {
     self.id = id

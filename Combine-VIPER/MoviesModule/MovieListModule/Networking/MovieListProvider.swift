@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 class MovieListProvider: ProviderInterface {
   let repository: MovieListRepository
   
   @Published var errors = [Error]()
   @Published var movies = [MovieListCellModel]()
+  @Published var poster: UIImage?
   
   required init(repository: MovieListRepository) {
     self.repository = repository
@@ -19,7 +21,7 @@ class MovieListProvider: ProviderInterface {
   
   func getMovies() async {
     do {
-      movies = try await repository.getMovies()
+      movies = try await repository.getMovies().map { MovieListCellModel(detail: $0) }
     } catch {
       errors.append(error)
     }

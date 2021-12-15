@@ -7,16 +7,18 @@
 
 import UIKit
 
-protocol CellProtocol: UIView {
-  associatedtype ModelType
-
-  func render(_ model: ModelType)
-
+protocol ReusableCellProtocol: UIView {
   static var reuseIdentifier: String { get }
 }
 
-extension CellProtocol {
+extension ReusableCellProtocol {
   static var reuseIdentifier: String {
     return String(describing: Self.self).components(separatedBy: ".").last!
   }
+}
+
+protocol CellProtocol: ReusableCellProtocol {
+  associatedtype ModelType
+
+  func render(_ model: ModelType)
 }

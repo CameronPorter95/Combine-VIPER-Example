@@ -12,7 +12,10 @@ protocol PresenterInterface: VIPERInterface, ObservableObject {
   
   var interactor: Interactor { get }
   
-  var errors: [Error] { get set }
-  
   init(interactor: Interactor)
+}
+
+///A presenter which as used on the primary/base module of a given screen
+protocol MainPresenterInterface: PresenterInterface {
+  var errors: [Error] { get set }
 }

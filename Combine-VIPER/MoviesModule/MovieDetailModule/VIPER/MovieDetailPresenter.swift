@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import UIKit
 
-class MovieDetailPresenter: PresenterInterface, ObservableObject {
+class MovieDetailPresenter: MainPresenterInterface, ObservableObject {
   internal let interactor: MovieDetailInteractor
   
   private var cancellables = Set<AnyCancellable>()

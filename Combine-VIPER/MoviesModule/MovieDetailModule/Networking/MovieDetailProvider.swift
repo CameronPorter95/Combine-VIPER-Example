@@ -10,28 +10,17 @@ import UIKit
 
 class MovieDetailProvider: ProviderInterface {
   let repository: MovieDetailRepository
-  let imageRepository: MovieImageRepository
   
   @Published var errors = [Error]()
   @Published var detail: MovieDetail?
-  @Published var poster: UIImage?
   
-  required init(repository: MovieDetailRepository, imageRepository: MovieImageRepository) {
+  required init(repository: MovieDetailRepository) {
     self.repository = repository
-    self.imageRepository = imageRepository
   }
   
   func getDetail(for id: Int) async {
     do {
       detail = try await repository.getDetail(for: id)
-    } catch {
-      errors.append(error)
-    }
-  }
-  
-  func getPoster(for path: String) async {
-    do {
-      poster = try await imageRepository.getPoster(for: path)
     } catch {
       errors.append(error)
     }

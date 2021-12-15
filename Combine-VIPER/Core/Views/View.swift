@@ -38,6 +38,12 @@ class View<P>: UIView, ViewInterface, NibType where P: PresenterInterface {
   }
   
   internal func refresh(output: P.ObjectWillChangePublisher.Output) {
+    fatalError("init(coder:) has not been implemented")
+  }
+}
+
+class MainView<P: MainPresenterInterface>: View<P> {
+  internal override func refresh(output: P.ObjectWillChangePublisher.Output) {
     presenter.errors.enumerated().forEach { error in
       let notice = Notice(type: .error(), title: error.element.localizedDescription)
       ErrorNotice.show(onto: self, using: notice)

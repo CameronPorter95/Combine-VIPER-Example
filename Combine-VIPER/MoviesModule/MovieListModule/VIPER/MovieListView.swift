@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Combine
 
-class MovieListView: View<MovieListPresenter> {
+class MovieListView: MainView<MovieListPresenter> {
   @IBOutlet var tableView: UITableView!
   
   required init(presenter: MovieListPresenter) {
@@ -33,8 +33,8 @@ class MovieListView: View<MovieListPresenter> {
 
 extension MovieListView: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    if let id = presenter.movies[safe: indexPath.row]?.id {
-      presenter.notifyMovieSelection(with: id)
+    if let cellModel = presenter.movies[safe: indexPath.row] {
+      presenter.notifyMovieSelection(with: cellModel)
     }
   }
 }
@@ -45,8 +45,8 @@ extension MovieListView: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListCellView", for: indexPath) as! MovieListCellView
-    cell.render(presenter.movies[indexPath.row])
+    let cell = tableView.dequeueReusableCell(withIdentifier: MovieListCellView.reuseIdentifier, for: indexPath) as! MovieListCellView
+    presenter.router.makeMovieCellModule(for: cell, with: presenter.movies[indexPath.row])
     return cell
   }
 }

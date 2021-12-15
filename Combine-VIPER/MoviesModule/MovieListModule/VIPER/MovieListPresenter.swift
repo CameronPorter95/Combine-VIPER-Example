@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class MovieListPresenter: PresenterInterface, ObservableObject {
+class MovieListPresenter: MainPresenterInterface, ObservableObject {
   internal let interactor: MovieListInteractor
   internal let router = MovieListRouter()
   
@@ -27,10 +27,17 @@ class MovieListPresenter: PresenterInterface, ObservableObject {
     interactor.provider.$errors
       .assign(to: \.errors, on: self)
       .store(in: &cancellables)
+    
+    NotificationCenter.default.publisher(for: .movieListCellDidError)
+      .compactMap { $0.object as? Error }
+      .sink { [weak self] error in
+        self?.errors.append(error)
+      }
+      .store(in: &cancellables)
   }
   
-  func notifyMovieSelection(with id: Int) {
-    NotificationCenter.default.post(name: .didSelectMovie, object: id)
+  func notifyMovieSelection(with cellModel: MovieListCellModel) {
+    NotificationCenter.default.post(name: .didSelectMovie, object: cellModel)
   }
 }
 

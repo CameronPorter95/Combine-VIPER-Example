@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Combine
 
-class MovieDetailView: View<MovieDetailPresenter> {
+class MovieDetailView: MainView<MovieDetailPresenter> {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var poster: UIImageView!
   

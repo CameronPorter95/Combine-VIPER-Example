@@ -18,8 +18,11 @@ class MovieDetailModel: ModelInterface {
   
   init() {
     NotificationCenter.default.publisher(for: .didSelectMovie)
-      .compactMap { $0.object as? Int }
-      .assign(to: \.id, on: self)
+      .compactMap { $0.object as? MovieListCellModel }
+      .sink { [weak self] cellModel in
+        self?.id = cellModel.detail.id
+        self?.poster = cellModel.poster
+      }
       .store(in: &cancellables)
   }
 }

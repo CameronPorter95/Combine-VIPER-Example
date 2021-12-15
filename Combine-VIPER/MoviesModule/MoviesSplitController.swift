@@ -31,9 +31,8 @@ class MovieSplitController: UISplitViewController {
     let detailView = MovieDetailView(presenter:
       MovieDetailPresenter(interactor:
         MovieDetailInteractor(model: MovieDetailModel(), provider:
-          MovieDetailProvider(
-            repository: MovieDetailRepository(persistence: appDelegate.persistence),
-            imageRepository: MovieImageRepository(persistence: appDelegate.persistence)
+          MovieDetailProvider(repository:
+            MovieDetailRepository(persistence: appDelegate.persistence)
           )
         )
       )

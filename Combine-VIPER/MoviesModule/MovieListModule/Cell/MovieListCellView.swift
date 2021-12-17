@@ -17,5 +17,6 @@ class MovieListCellView: UITableViewCell, CellProtocol {
   func render(_ model: MovieListCellModel) {
     label.text = model.detail.title
     poster.image = model.poster
+    poster.layer.cornerRadius = poster.bounds.width / 2
   }
 }

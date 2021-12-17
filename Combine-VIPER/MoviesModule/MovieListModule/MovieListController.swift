@@ -10,4 +10,12 @@ import Combine
 
 class MovieListController: UIViewController {
   
+  var movieListView: MovieListView? {
+    view.subviews.first as? MovieListView
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    movieListView?.didDisappear()
+  }
 }

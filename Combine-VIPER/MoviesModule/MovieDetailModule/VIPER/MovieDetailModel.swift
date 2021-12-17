@@ -20,6 +20,7 @@ class MovieDetailModel: ModelInterface {
     NotificationCenter.default.publisher(for: .didSelectMovie)
       .compactMap { $0.object as? MovieListCellModel }
       .sink { [weak self] cellModel in
+        guard self?.id != cellModel.detail.id else { return }
         self?.id = cellModel.detail.id
         self?.detail = cellModel.detail
         self?.poster = cellModel.poster

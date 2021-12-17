@@ -9,7 +9,7 @@ import Foundation
 
 class MovieListRepository: Repository<MovieListService>, RequestDecodable {
   
-  func getMovies() async throws -> [MovieListCellDetail] {
+  func getMovies() async throws -> [MovieDetail] {
     return try await asyncArray(.getMovies)
   }
 }

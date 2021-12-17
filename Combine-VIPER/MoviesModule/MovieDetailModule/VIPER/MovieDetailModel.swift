@@ -21,6 +21,7 @@ class MovieDetailModel: ModelInterface {
       .compactMap { $0.object as? MovieListCellModel }
       .sink { [weak self] cellModel in
         self?.id = cellModel.detail.id
+        self?.detail = cellModel.detail
         self?.poster = cellModel.poster
       }
       .store(in: &cancellables)

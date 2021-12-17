@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 struct MovieListCellModel {
-  var detail: MovieListCellDetail
+  var detail: MovieDetail
   var poster: UIImage?
   
-  init(detail: MovieListCellDetail) {
+  init(detail: MovieDetail) {
     self.detail = detail
   }
 }

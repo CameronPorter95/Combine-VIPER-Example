@@ -50,6 +50,9 @@ class MovieSplitController: UISplitViewController {
     setViewController(listController, for: .primary)
     setViewController(detailController, for: .secondary)
     
+    listController.navigationItem.title = "Popular Movies"
+    detailController.navigationItem.title = "Details"
+    
     NotificationCenter.default.publisher(for: .didSelectMovie, object: nil)
       .sink { [weak self] _ in
         self?.showDetailViewController(detailController, sender: nil)

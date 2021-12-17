@@ -17,7 +17,7 @@ class ServiceProvider<T: TargetType>: MoyaProvider<T> {
   static func instance() -> ServiceProvider {
     let plugins: [PluginType] = [
       AuthPlugin(),
-//      NetworkLoggerPlugin(configuration: .init(logOptions: [.successResponseBody]))
+      NetworkLoggerPlugin(configuration: .init(logOptions: [.successResponseBody]))
     ]
     return ServiceProvider(plugins: plugins)
   }

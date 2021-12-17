@@ -35,6 +35,11 @@
                 <constraint firstItem="3mO-vw-E8h" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="WSa-H5-bcu"/>
                 <constraint firstItem="3mO-vw-E8h" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bSq-Ih-gVa"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="7"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="140.57971014492756" y="-162.72321428571428"/>
         </view>
     </objects>

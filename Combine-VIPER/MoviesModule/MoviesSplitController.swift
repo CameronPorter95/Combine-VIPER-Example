@@ -21,8 +21,9 @@ class MovieSplitController: UISplitViewController {
     MovieListView(presenter:
       MovieListPresenter(interactor:
         MovieListInteractor(model: MovieListModel(), provider:
-          MovieListProvider(repository:
-            MovieListRepository(persistence: appDelegate.persistence)
+          MovieListProvider(
+            repository: MovieListRepository(persistence: appDelegate.persistence),
+            imageRepository: MovieImageRepository(persistence: appDelegate.persistence)
           )
         )
       )

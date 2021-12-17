@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class MovieListCellModel: ModelInterface {
-  @Published var detail: MovieListCellDetail
-  @Published var poster: UIImage?
+struct MovieListCellModel {
+  var detail: MovieListCellDetail
+  var poster: UIImage?
   
   init(detail: MovieListCellDetail) {
     self.detail = detail

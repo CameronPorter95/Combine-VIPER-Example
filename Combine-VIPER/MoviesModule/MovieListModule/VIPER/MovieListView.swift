@@ -46,7 +46,18 @@ extension MovieListView: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: MovieListCellView.reuseIdentifier, for: indexPath) as! MovieListCellView
-    presenter.router.makeMovieCellModule(for: cell, with: presenter.movies[indexPath.row])
+    cell.render(presenter.movies[indexPath.row])
+//    if presenter.movies[indexPath.row].isAssignedToModule == false {
+//      presenter.router.makeMovieCellModule(for: cell, with: presenter.movies[indexPath.row])
+//    } else {
+//      cell.presenter?.detail = presenter.movies[indexPath.row].detail
+//      cell.presenter?.poster = presenter.movies[indexPath.row].poster
+//      cell.presenter?.interactor.model.poster = presenter.movies[indexPath.row].poster
+//      cell.presenter?.interactor.model.detail = presenter.movies[indexPath.row].detail
+////      cell.presenter?.interactor.setModel(to: presenter.movies[indexPath.row]) //Because the cell is reused, the model needs to be reused too
+//    }
+//    cell.poster.image = presenter.movies[indexPath.row].poster
+//    cell.label.text = presenter.movies[indexPath.row].detail.title
     return cell
   }
 }

@@ -8,6 +8,6 @@
 import Foundation
 import Combine
 
-class MovieListModel: ModelInterface {
+class MovieListModel: ModelInterface, ObservableObject {
   @Published var movies = [MovieListCellModel]()
 }

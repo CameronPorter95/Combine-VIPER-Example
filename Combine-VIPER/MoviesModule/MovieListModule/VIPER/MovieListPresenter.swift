@@ -27,13 +27,6 @@ class MovieListPresenter: MainPresenterInterface, ObservableObject {
     interactor.provider.$errors
       .assign(to: \.errors, on: self)
       .store(in: &cancellables)
-    
-    NotificationCenter.default.publisher(for: .movieListCellDidError)
-      .compactMap { $0.object as? Error }
-      .sink { [weak self] error in
-        self?.errors.append(error)
-      }
-      .store(in: &cancellables)
   }
   
   func notifyMovieSelection(with cellModel: MovieListCellModel) {

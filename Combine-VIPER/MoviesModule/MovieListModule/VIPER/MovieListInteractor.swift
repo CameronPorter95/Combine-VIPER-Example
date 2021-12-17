@@ -27,12 +27,23 @@ class MovieListInteractor: InteractorInterface {
       .assign(to: \.model.movies, on: self)
       .store(in: &cancellables)
     
-    getMovies()
+    getAllInformation()
   }
   
-  func getMovies() {
+  func getMovies() async {
+    await provider.getMovies()
+  }
+  
+  func getPosters() async {
+    for (index, path) in movies.map({ $0.detail.poster_path }).enumerated() {
+      model.movies[index].poster = await provider.getPoster(for: path)
+    }
+  }
+  
+  func getAllInformation() {
     Task {
-      await provider.getMovies()
+      await getMovies()
+      await getPosters()
     }
   }
 }
